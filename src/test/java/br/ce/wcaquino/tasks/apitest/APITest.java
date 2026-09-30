@@ -12,7 +12,6 @@ public class APITest {
     @BeforeClass
     public static void setup() {
         RestAssured.baseURI = "http://localhost:8001/tasks-backend";
-
     }
 
     @Test
@@ -30,7 +29,7 @@ public class APITest {
     @Test
     public void deveAdicionarTarefaComSucesso() {
         RestAssured.basePath = "/todo";
-        String body = "{\"task\": \"teste 2\", \"dueDate\": \"2026-09-29\"}";
+        String body = "{\"task\": \"teste 2\", \"dueDate\": \"2030-09-29\"}";
 
         RestAssured.given()
                     .body(body)
